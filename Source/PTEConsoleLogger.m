@@ -336,7 +336,7 @@ heightForRowAtIndexPath:(NSIndexPath *)indexPath
     // Collapsed cell
     NSString * string = [self textForCellWithLogMessage:logMessage];
     CGSize size;
-    if (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"7.0"))
+    if (@available(iOS 7, *))
     {
         // Save a sample label reference
         static UILabel * labelModel;

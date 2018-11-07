@@ -52,7 +52,7 @@ static PTEDashboard * _sharedDashboard;
         self.windowLevel = UIWindowLevelStatusBar + 1;
         _screenSize = [UIScreen mainScreen].bounds.size;
         
-        if (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"7.0"))
+        if (@available(iOS 7, *))
         {
             self.tintColor = [UIColor lightGrayColor];
         }

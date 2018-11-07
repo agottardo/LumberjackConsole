@@ -81,8 +81,14 @@
     searchBar.delegate = self.logger;
     
     // Customize searchBar keyboard's return key
-    NSArray * subviewsToCheck = SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"7.0") ? ((UIView *)_searchBar.subviews[0]).subviews :
-                                                                                  _searchBar.subviews;
+    NSArray * subviewsToCheck;
+
+    if (@available(iOS 7, *)) {
+        subviewsToCheck = ((UIView *)_searchBar.subviews[0]).subviews;
+    } else {
+        subviewsToCheck = _searchBar.subviews;
+    }
+
     for(UIView * view in subviewsToCheck)
     {
         if([view conformsToProtocol:@protocol(UITextInputTraits)])
