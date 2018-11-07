@@ -20,7 +20,6 @@
 
 #import "PTEConsoleTableView.h"
 #import "PTEConsoleLogger.h"
-#import <NBUCore/NBUCore.h>
 
 @implementation PTEConsoleTableView
 

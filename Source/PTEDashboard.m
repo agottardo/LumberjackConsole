@@ -20,7 +20,6 @@
 
 #import "PTEDashboard.h"
 #import <QuartzCore/QuartzCore.h>
-#import <NBUCore/NBUCore.h>
 
 #define kMinimumHeight 20.0
 
